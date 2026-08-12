@@ -5,12 +5,12 @@ provider "aws"{
 resource "aws_dynamodb_table" "mydynamodbtable"{
 
     billing_mode="PROVISIONED"
-    hash_key="userId"
+    hash_key="userid"
     read_capacity=10
     write_capacity=10
     name=var.dynamotable
     attribute{
-        name="userId"
+        name="userid"
         type="S"
     }
 
