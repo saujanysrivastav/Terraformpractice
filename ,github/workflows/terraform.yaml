@@ -1,5 +1,8 @@
 name: Terraform Deployment
-on: push
+on: 
+ push:
+  branches:
+    - master
 jobs:
  deploy:
    env:
@@ -17,7 +20,7 @@ jobs:
       run: |
        terraform init
        terraform plan
-
+    
     - name : Terraform apply
       run: terraform apply -auto-approve
-      
+  
